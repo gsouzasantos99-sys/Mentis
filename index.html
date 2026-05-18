@@ -2,11 +2,13 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
 
 <style>
 
 body{
     margin:0;
+    overflow:auto;
 }
 
 .container{
@@ -16,20 +18,25 @@ body{
 }
 
 .background{
-    width:100%;
     position:absolute;
     left:0;
     top:0;
+
+    width:1024px;
+    height:1536px;
 }
 
+/* QR AJUSTADO */
 .qr{
     position:absolute;
 
-    left:565px;
-    top:790px;
+    left:610px;
+    top:900px;
 
-    width:220px;
-    height:220px;
+    width:300px;
+    height:300px;
+
+    object-fit:contain;
 }
 
 </style>
@@ -40,10 +47,12 @@ body{
 
 <div class="container">
 
+    <!-- fundo -->
     <img
         class="background"
-        src="https://raw.githubusercontent.com/gsouzasantos99-sys/Mentis/refs/heads/main/Folheto%20Mentis%20PT.png">
+        src="https://raw.githubusercontent.com/gsouzasantos99-sys/Mentis/main/Folheto%20Mentis%20PT.png">
 
+    <!-- qr dinâmico -->
     <img
         id="qr"
         class="qr">
@@ -56,7 +65,9 @@ const params = new URLSearchParams(window.location.search);
 
 const qr = params.get("qr");
 
-document.getElementById("qr").src = qr;
+if(qr){
+    document.getElementById("qr").src = qr;
+}
 
 </script>
 
