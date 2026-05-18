@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset="UTF-8">
 
@@ -8,7 +7,6 @@
 
 body{
     margin:0;
-    overflow:auto;
 }
 
 .container{
@@ -26,33 +24,29 @@ body{
     height:1536px;
 }
 
-/* QR AJUSTADO */
 .qr{
     position:absolute;
 
-    left:750px;
-    top:1000px;
+    left:640px;
+    top:930px;
 
-    width:300px;
-    height:300px;
+    width:320px;
+    height:320px;
 
     object-fit:contain;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- fundo -->
     <img
         class="background"
         src="https://raw.githubusercontent.com/gsouzasantos99-sys/Mentis/main/Folheto%20Mentis%20PT.png">
 
-    <!-- qr dinâmico -->
     <img
         id="qr"
         class="qr">
@@ -72,5 +66,4 @@ if(qr){
 </script>
 
 </body>
-
 </html>
